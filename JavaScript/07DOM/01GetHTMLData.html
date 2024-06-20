@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GET HTML DATA</title>
+  </head>
+  <body>
+    <h1>GET HTML DATA</h1>
+    <input type="text" class="same" name="fname" id="fname" value="anything" />
+    <input type="text" class="same" name="lname" id="lname" value="anything" />
+    <input type="text" class="same" name="" id="" value="anything" />
+    <input type="text" class="same" name="" id="" value="anything" />
+    <input type="text" class="same" name="fname" id="" value="anything" />
+    <input type="text" class="same" name="" id="" value="anything" />
+    <input type="text" class="same" name="" id="" value="anything" />
+    <input type="text" class="same" name="" id="" value="anything" />
+
+    <script>
+      // GET HTML DATA
+
+      //   1. getElementById
+
+      //   let inpData = document.getElementById("fname");
+      //   let inpData = document.getElementById("fname").value;
+      //   console.log(inpData);
+      //   console.log(inpData.value);
+
+      //   2. getElementsByClassName
+
+      //   let inpData = document.getElementsByClassName("same");
+      //   console.log(inpData);
+      //   console.log(inpData[0].value);
+
+      //   3. getElementsByName
+
+      //   let inpData = document.getElementsByName("fname");
+      //   console.log(inpData);
+      //   console.log(inpData[0].value);
+
+      //   4. getElementsByTagName
+
+      //   let inpData = document.getElementsByTagName('input');
+      //   console.log(inpData); 
+      //   console.log(inpData[0].value);
+
+      //   5. querySelector
+
+    //   let inpData = document.querySelector(".same");
+    //   console.log(inpData);
+    //   console.log(inpData.value);
+
+
+      //   5. querySelectorAll
+
+      let inpData = document.querySelectorAll("input");
+      console.log(inpData);
+      console.log(inpData.value);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IIFE Function</title>
+  </head>
+  <body>
+    <h1>IIFE Function</h1>
+    <p>
+      An IIFE (Immediately Invoked Function Expression) is a JavaScript function
+      that runs as soon as it is defined.
+    </p>
+
+    <ul>
+      <li>
+        The first is the anonymous function with lexical scope enclosed within
+        the Grouping Operator (). This prevents accessing variables within the
+        IIFE idiom as well as polluting the global scope.
+      </li>
+      <li>
+        The second part creates the immediately invoked function expression ()
+        through which the JavaScript engine will directly interpret the
+        function.
+      </li>
+    </ul>
+    <script>
+      // IIFE Function
+
+      (function greet() {
+        console.log("Namaste Bharat");
+      })();
+    </script>
+  </body>
+</html>

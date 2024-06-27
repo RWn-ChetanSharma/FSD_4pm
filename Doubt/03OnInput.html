@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OnInput In JS</title>
+
+    <style>
+        *{
+            font-size: 30px;
+        }
+        .box{
+            border: 2px solid lime;
+            width: 600px;
+            height: 300px;
+            position: relative;
+            padding: 50px;
+        }
+        span{
+            position: absolute;
+            top: 50px;
+        }
+    </style>
+  </head>
+  <body id="body">
+    <div class="box">
+        <span id="spnId">Hello</span>
+        <input type="text" id="first" oninput="handleEvent(this)"/>
+    </div>
+
+    <script>
+        // CSS 
+
+        document.getElementById("body").style.backgroundColor = "grey"
+
+
+        function handleEvent(a) {
+            if (a.value == "") {
+                document.getElementById("spnId").style.top = "47px"
+            } else {
+                
+                document.getElementById("spnId").style.top = "20px"
+            }
+        }
+    </script>
+  </body>
+</html>

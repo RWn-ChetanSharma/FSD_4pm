@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array In JS</title>
+</head>
+<body>
+    <h1>Array In JS</h1>
+
+
+    <script>
+        let arr = [10,20,30,40,50,60]
+
+        console.log(arr);
+        console.log(arr.length);
+        console.log(typeof arr);
+        console.log(arr[4]);
+        // arr.forEach(element => {
+        //    console.log(element); 
+        // });
+        // for (let i = 0; i < arr.length; i++) {
+        //     console.log(i);
+        //     console.log(arr);
+        //     console.log(arr[i]);
+        // }
+        console.log(arr.push(100));   // Adds one or more elements to the end of an array, and returns the new length of the array.
+        console.log(arr[6]);
+        console.log(arr);
+        console.log(arr.pop());    // Removes the last element from an array and returns that element.
+        console.log(arr.shift());   // Removes the first element from an array and returns that element.
+        console.log(arr); 
+        console.log(arr.unshift(120));   // Adds one or more elements to the front of an array, and returns the new length of the array
+        console.log(arr);
+
+        console.log(arr.toString());   // Returns a string representing the calling array and its elements.
+        console.log(arr.reverse());   // Reverses the order of the elements of an array in place. (First becomes the last, last becomes first.)
+        console.log(arr.indexOf(50));   // Returns the first (least) index at which a given element can be found in the calling array.
+        console.log(arr.includes(60));   // Determines whether the calling array contains a value, returning true or false as appropriate.
+        console.log(arr);
+        console.log(arr.slice(2,4));    // Extracts a section of the calling array and returns a new array.
+
+        console.log(arr);
+
+        // console.log(arr.splice(2,2));   // Adds and/or removes elements from an array.
+        console.log(arr.splice(2,3,100,130));
+        console.log(arr);
+    
+    </script>
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Callback Hell</title>
+  </head>
+  <body>
+    <h1>Callback Hell</h1>
+    <p>
+      Callback hell is a phenomenon where a Callback is called inside another
+      Callback. It is the nesting of multiple Callbacks inside a function. If
+      you look at the design of the code, it seems just like a pyramid. Thus the
+      Callback hell is also referred to as the 'Pyramid of Doom'.
+    </p>
+
+    <script>
+      btn.addEventListener("click", function (productId) {
+        productListing(productId, function (productDetail) {
+          addToCart(productDetail, function (productDetail) {
+            proceedToPayment(productDetail, function (paymentInfo) {
+              OrderPlaced(paymentInfo, function (productDetail) {
+                orderSummary(productDetail);
+              });
+            });
+          });
+        });
+      });
+
+      //   Pyramid of DOOM =>
+
+      //   In computer programming, the pyramid of doom is a common problem that arises
+      //      when a program uses many levels of nested indentation to control access to a function.
+      //          It is commonly seen when checking for null pointers or handling callbacks.
+    </script>
+  </body>
+</html>

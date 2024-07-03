@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Callback Function</title>
+  </head>
+  <body>
+    <h1>Callback Function</h1>
+    <p>A Callback function is a function which is passed as an arguments to another function.</p>
+
+    <script>
+      // Synchoronous Programming
+
+      // console.log("Good Morning");
+      // console.log("Good AfterNoon");
+      // console.log("Good Evenning");
+      // console.log("Good Night");
+
+      // Asynchoronous Programming
+
+      console.log("Good Morning");
+      console.log("Good AfterNoon");
+      setTimeout(() => {
+        console.log("Namaste Bharat");
+      }, 5000);
+      console.log("Good Evenning");
+      console.log("Good Night");
+
+   
+      function b(a) {                    // HOF => Higher Order Function
+        a();
+      }
+      b(function a() {                      // Callback Function
+        console.log("Hello");
+      });                    
+    </script>
+  </body>
+</html>

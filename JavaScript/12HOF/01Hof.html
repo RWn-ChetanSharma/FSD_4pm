@@ -8,20 +8,65 @@
   <body>
     <h1>HOF - Higher Order Function</h1>
     <p>
-      A function which takes another function as an arguments is called as Higher Order Function.
+      A function which takes another function as an arguments is called as
+      Higher Order Function.
     </p>
     <p>Functions are treated as Senior Citizens in JavaScript</p>
 
     <script>
-      function a() {
-        // Callback Function
-        console.log("Hello");
+      // function a() {
+      //   // Callback Function
+      //   console.log("Hello");
+
+      // }
+      // function b(a) {
+      //   // HOF => Higher Order Function
+      //   a();
+      // }
+      // b(a);
+
+      const radius = [1, 2, 3, 4, 5];
+      console.log(radius);
+
+      // Area 
+
+      function calculateArea() {
+        const result = [];
+        for (let i = 0; i < radius.length; i++) {
+          result.push(Math.PI * radius[i] * radius[i]);
+        }
+        console.log(result);
       }
-      function b(a) {
-        // HOF => Higher Order Function
-        a();
+      calculateArea()
+
+      // Circumference
+
+
+      function calculateCircumference() {
+        const result = [];
+        for (let i = 0; i < radius.length; i++) {
+          result.push(2 * Math.PI * radius[i]);
+        }
+        console.log(result);
       }
-      b(a);
+      calculateCircumference()
+
+
+      // Diameter
+
+
+      function calculateDiameter() {
+        const result = [];
+        for (let i = 0; i < radius.length; i++) {
+          result.push(2 * radius[i]);
+        }
+        console.log(result);
+      }
+      calculateDiameter()
+
+
+
+      // DRY => Don't Repeat YourSelf
     </script>
   </body>
 </html>

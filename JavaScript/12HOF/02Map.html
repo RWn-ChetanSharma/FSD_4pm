@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Map Method</title>
+  </head>
+  <body>
+    <h1>Map Method</h1>
+
+    <script>
+      const radius = [1, 2, 3, 4, 5];
+      console.log(radius);
+
+      // Area
+
+      const area = function (radius) {
+        return Math.PI * radius * radius;
+      };
+      const circumference = function (radius) {
+        return 2 * Math.PI * radius;
+      };
+      const diameter = function (radius) {
+        return 2 * radius;
+      };
+
+    //   function calculate(radius, logic) {
+    //     const result = [];
+    //     for (let i = 0; i < radius.length; i++) {
+    //       result.push(logic(radius[i]));
+    //     }
+    //     console.log(result);
+    //   }
+    //   calculate(radius, area);
+    //   calculate(radius, circumference);
+    //   calculate(radius, diameter);
+
+
+    const areaArray = radius.map(area);
+
+      console.log(areaArray)
+      console.log(radius.map(circumference));
+      console.log(radius.map(diameter));
+
+
+     
+    </script>
+  </body>
+</html>

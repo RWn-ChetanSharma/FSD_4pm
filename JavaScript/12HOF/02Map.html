@@ -11,12 +11,14 @@
     <script>
       const radius = [1, 2, 3, 4, 5];
       console.log(radius);
+      // console.log(radius.calculate(area));    //  ReferenceError: Cannot access 'area' before initialization
 
       // Area
 
       const area = function (radius) {
         return Math.PI * radius * radius;
       };
+
       const circumference = function (radius) {
         return 2 * Math.PI * radius;
       };
@@ -24,26 +26,35 @@
         return 2 * radius;
       };
 
-    //   function calculate(radius, logic) {
-    //     const result = [];
-    //     for (let i = 0; i < radius.length; i++) {
-    //       result.push(logic(radius[i]));
-    //     }
-    //     console.log(result);
-    //   }
-    //   calculate(radius, area);
-    //   calculate(radius, circumference);
-    //   calculate(radius, diameter);
+       Array.prototype.calculate = (logic) => {
+        // const myFunc = calculate = (radius, logic) => {
+        const result = [];
+        for (let i = 0; i < radius.length; i++) {
+          result.push(logic(radius[i]));
+        }
+        return result;
+      }
+      
+      
+      console.log(radius.map(area)); 
+      console.log(radius.calculate(area));
+      // console.log(calculate(radius, area));
+      // console.log(radius.map(circumference));
+      // console.log(radius.map(diameter));
 
 
-    const areaArray = radius.map(area);
+      // Syntax of Map function 
 
-      console.log(areaArray)
-      console.log(radius.map(circumference));
-      console.log(radius.map(diameter));
+      // arr.map(()=> {
 
+      // })
+      const output = radius.map(element => {
+        return element * 2
+        
+      });
 
-     
+      console.log(output);
+      
     </script>
   </body>
 </html>

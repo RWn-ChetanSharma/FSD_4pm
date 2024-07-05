@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reduce in JS</title>
+  </head>
+  <body>
+    <h1>Reduce in JS</h1>
+
+    <script>
+      const marks = [1, 2, 9, 8, 6, 4, 7, 3];
+
+      console.log(marks);
+
+      // Sum of Array
+
+        function sumOfArray() {
+            let sum = 0;
+            for (let i = 0; i < marks.length; i++) {
+                sum = sum + marks[i];
+            }
+            // console.log(sum);
+            return sum; 
+        }
+
+        console.log(sumOfArray());
+        // sumOfArray()
+
+
+
+        // Syntax 
+
+
+        const sumOfNumber = marks.reduce((acc, curr)=>{
+            acc = acc + curr
+
+            return acc
+        },0)
+
+        console.log(sumOfNumber);
+
+
+      // Maximum in the given Array
+    </script>
+  </body>
+</html>

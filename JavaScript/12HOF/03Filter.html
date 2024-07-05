@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filter in JS</title>
+  </head>
+  <body>
+    <h1>Filter in JS</h1>
+    <p>
+      The filter() method of Array instances creates a shallow copy of a portion
+      of a given array, filtered down to just the elements from the given array
+      that pass the test implemented by the provided function.
+    </p>
+
+    <script>
+      const marks = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+      console.log(marks);
+
+      // Even Number, Odd Number
+
+      const evenNumber = marks.filter((e) => e % 2 === 0);
+      const oddNumber = marks.filter((e) => e % 2 !== 0);
+
+      console.log(evenNumber);
+      console.log(oddNumber);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter</title>
+  </head>
+  <body>
+      <button id="btnPrev">Prev</button>
+    <button id="btnNext">Next</button>
+
+    <script>
+        let a = 0
+      const next = document.querySelector("#btnNext");
+      const prev = document.querySelector("#btnPrev");
+      next.addEventListener("click", function () {
+        a+=1
+        console.log(a);
+
+      });
+      prev.addEventListener("click", function () {
+        a-=1
+        console.log(a);
+
+      });
+
+
+
+      const details = [
+        {
+            "name": "Mohit",
+          
+
+        },
+        {
+            "name": "Vansh",
+            
+
+        },
+        {
+            "name": "Rudra",
+          
+        },
+        {
+            "name": "Vinit",
+          
+
+        },
+       
+      ]
+
+      console.log(details[1].name);
+    </script>
+  </body>
+</html>

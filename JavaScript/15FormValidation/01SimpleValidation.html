@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Form Validation</title>
+  </head>
+  <body>
+    <h1>Simple Form Validation</h1>
+
+    <input type="text" id="uname" onblur="validateUserName()"/>
+    <span id="error1"></span>
+    <br><br>
+    <input type="password" id="upass" onblur="validateUserPassword()"/>
+    <span id="error2"></span>
+    <br><br>
+    <input type="email" id="uemail" onblur="validateUserEmail()"/>
+    <span id="error3"></span>
+    <br><br>
+    <input type="mobile" id="umobile" onblur="validateUserMobile()"/>
+    <span id="error4"></span>
+
+
+
+
+    <script>
+        function validateUserName() {
+            let username = document.getElementById("uname")
+            console.log(username);
+            console.log(username.value);
+
+            if (username.value == "") {
+                console.log("Enter Valid User Name");
+                document.getElementById("error1").innerText = "Enter Valid User Name"
+                document.getElementById("error1").style.color = "red"
+            } else {
+                console.log("Success");
+                document.getElementById("error1").innerText = ""
+            }
+
+        }
+        function validateUserPassword() {
+            let userpass = document.getElementById("upass")
+            if (userpass.value == "") {
+                document.getElementById("error2").innerText = "Enter Valid User Password"
+                document.getElementById("error2").style.color = "red"
+            } else {
+                document.getElementById("error2").innerText = ""
+            }
+        }
+        function validateUserEmail() {
+            let useremail = document.getElementById("uemail")
+            if (useremail.value == "") {
+                document.getElementById("error3").innerText = "Enter Valid User Email"
+                document.getElementById("error3").style.color = "red"
+            } else {
+                document.getElementById("error3").innerText = ""
+            }
+        }
+        function validateUserMobile() {
+            let usermobile = document.getElementById("umobile")
+            if (usermobile.value == "") {
+                document.getElementById("error4").innerText = "Enter Valid User Mobile"
+                document.getElementById("error4").style.color = "red"
+            } else {
+                document.getElementById("error4").innerText = ""
+            }
+        }
+    </script>
+  </body>
+</html>
+
+
+
+<!-- rohanfullstack@gmail.com -->
+
+
+<!-- [a-zA-Z0-9.%]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,4} -->

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation</title>
+  </head>
+  <body>
+    <h1>Form Validation Using Single Function</h1>
+
+    <input type="text" id="uname" onblur="validateMyForm(this, 'error1', 'User Name')"/>
+    <span id="error1"></span>
+    <br><br>
+    <input type="password" id="upass" onblur="validateMyForm(this, 'error2', 'User Password')"/>
+    <span id="error2"></span>
+    <br><br>
+    <input type="email" id="uemail" onblur="validateMyForm(this, 'error3', 'User Email')"/>
+    <span id="error3"></span>
+    <br><br>
+    <input type="mobile" id="umobile" onblur="validateMyForm(this, 'error4', 'User Mobile')"/>
+    <span id="error4"></span>
+
+
+
+
+    <script>
+        function validateMyForm(e,spnId, msg) {
+            if (e.value == "") {
+                document.getElementById(spnId).innerText = "Enter Valid " + msg
+                document.getElementById(spnId).style.color = "red"
+            } else {
+                document.getElementById(spnId).innerText = ""
+            }
+
+        }
+       
+    </script>
+  </body>
+</html>
+
+

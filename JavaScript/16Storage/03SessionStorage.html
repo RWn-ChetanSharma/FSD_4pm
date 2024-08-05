@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Session Storage</title>
+  </head>
+  <body>
+    <h1>Session Storage</h1>
+    <button id="btnSet">Set Value</button>
+    <button id="btnGet">Get Value</button>
+    <script>
+      btnSet.addEventListener("click", function () {
+        sessionStorage.setItem("Age", "20");
+      });
+      btnGet.addEventListener("click", function () {
+        const ageIs = sessionStorage.getItem("Age");
+        console.log(ageIs);
+      });
+      // sessionStorage.removeItem("Age")
+    </script>
+  </body>
+</html>

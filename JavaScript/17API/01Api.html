@@ -48,17 +48,25 @@
         ).innerHTML = `<div class="card" style="width: 18rem;">
                         <img src="${data.image}" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">${data.title.slice(0,40)}</h5>
-                            <p class="card-text">${data.description.slice(0,80)}</p>
-                            <a href="#" class="btn btn-primary">Price : ${data.price}</a>
+                            <h5 class="card-title">${data.title.slice(
+                              0,
+                              40
+                            )}</h5>
+                            <p class="card-text">${data.description.slice(
+                              0,
+                              80
+                            )}</p>
+                            <a href="#" class="btn btn-primary">Price : ${
+                              data.price
+                            }</a>
                         </div>
                         </div>`;
-                    }
-                    
-                    function handleNext() {
-                      count = count + 1;
-                      getproducts();
-                    }
+      }
+
+      function handleNext() {
+        count = count + 1;
+        getproducts();
+      }
     </script>
   </body>
 </html>

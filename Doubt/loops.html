@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>loops in JS</title>
+  </head>
+  <body>
+    <h1>Loops in Javascript</h1>
+    <div id="one">my name is :<span id="two"></span></div>
+    <button id="next" onclick="next()">Next</button>
+    <button id="prev" onclick="prev()">prev</button>
+    <script>
+      let arr = ["mitan", "parth", "mohit", "vinit", "vansh", "Rudra"];
+      let i =-1;
+      let name = document.getElementById("two");
+      function next() {
+        if (i >= arr.length -1) {
+          i = 0;
+        } else {
+          i++;
+          name.innerText = arr[i];
+          console.log(arr[i]);
+        }
+      }
+
+      function prev() {
+        if (i == 0) {
+          i = arr.length - 1;
+        } else {
+            i--;
+          name.innerText = arr[i];
+          console.log(arr[i]);
+          
+        }
+      }
+    </script>
+  </body>
+</html>

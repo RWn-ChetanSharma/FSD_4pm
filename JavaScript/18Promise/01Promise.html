@@ -21,42 +21,43 @@
     <script>
       // Synchronous Operation
 
-      //   let a = 10;
-      //   console.log(a);
-      //   let b = 20;
-      //   console.log(b);
-      //   let result = a + b;
-      //   console.log(result);
+      // let a = 10;
+      // console.log(a);
+      // let b = 20;
+      // console.log(b);
+      // let result = a + b;
+      // console.log(result);
 
       // Asynchronous operation
 
-      // async function getproducts() {
-      //   const ApiData = await fetch(`https://fakestoreapi.com/products`)
-      //   console.log(ApiData);
+      async function getproducts() {
+        try {
+          const ApiData = await fetch(`https://fakestoreapi.com/products`);
+          console.log(ApiData);
+          const data = await ApiData.json();
+          console.log(data);
+        } catch (error) {
+          console.log(error);
+        }
+      }
 
-      //   const data = await ApiData.json()
-
-      //   console.log(data);
-
-      // }
-
-      // getproducts()
+      getproducts();
 
       // Example
 
-      const promise = new Promise((ha, na) => {
-        let a = 5;
-        let b = 6;
-        if (a == b) {
-          ha("sahi he!");
-        } else {
-          na("galat he!");
-        }
-        }).then((res) => {
-          console.log(res);
-        }).then((Err) => {
-          console.log(Err);
-        });
+      // const promise = new Promise((resolve, reject) => {
+      //   let a = 5;
+      //   let b = 6;
+      //   if (a == b) {
+      //     resolve("sahi he!");
+      //   } else {
+      //     reject("galat he!");
+      //   }
+      //   }).then((res)=>{
+      //     console.log(res);
+      //   }).catch((err)=>{
+      //     console.log(err);
+      //   })
     </script>
   </body>
 </html>

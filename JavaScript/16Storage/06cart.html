@@ -40,7 +40,8 @@
     <!-- Custom JS  -->
 
     <script>
-      btnGet.addEventListener("click", function () {
+      // btnGet.addEventListener("click", function () {
+        window.addEventListener("load", function () {
         const userData = localStorage.getItem("UserDetail");
         if (userData) {
           const UserDetail = JSON.parse(userData);
